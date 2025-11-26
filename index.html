@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Irish History Tales | Darren Beaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Irish History Tales – chronological Irish history in short videos and historical fiction by Darren Beaming." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #024b33;
+      --green-dark: #013324;
+      --cream: #f5efe2;
+      --cream-light: #faf6ee;
+      --accent: #cbb68a;
+      --text-main: #f7f3e7;
+      --text-dark: #1c1c1c;
+      --error: #ffdddd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--green-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header.hero {
+      background: radial-gradient(circle at top left, #066c48 0, var(--green-dark) 55%);
+      color: var(--text-main);
+      padding: 1.5rem 1.5rem 3rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .logo-lockup {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-mark {
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      background: var(--green);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.15em;
+      color: var(--cream);
+    }
+
+    .logo-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.1rem, 2.5vw + 1.5rem, 2.8rem);
+      margin-bottom: 0.2rem;
+    }
+
+    .logo-text p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .hero-text h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .hero-text p {
+      max-width: 32rem;
+      font-size: 0.98rem;
+      opacity: 0.95;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease, border-color 0.15s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-primary {
+      background: var(--cream);
+      color: var(--green-dark);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--accent);
+      color: var(--cream);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-media-card {
+      background: rgba(2, 75, 51, 0.85);
+      border-radius: 1.5rem;
+      padding: 1rem;
+      border: 1px solid rgba(203,182,138,0.5);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.6);
+      overflow: hidden;
+    }
+
+    .hero-media img {
+      border-radius: 1.1rem;
+    }
+
+    main {
+      flex: 1;
+      background: linear-gradient(to bottom, var(--green-dark) 0, #021f16 55%, #010f0a 100%);
+    }
+
+    .section {
+      padding: 3rem 1.5rem;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: rgba(245,239,226,0.8);
+      margin-bottom: 1.75rem;
+      max-width: 35rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.8rem;
+    }
+
+    .about-card {
+      background: rgba(2,75,51,0.85);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(203,182,138,0.45);
+    }
+
+    .about-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .about-card p {
+      font-size: 0.96rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-card ul {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .about-card li::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    /* TikTok section */
+    .tiktok-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .tiktok-note {
+      font-size: 0.85rem;
+      opacity: 0.8;
+      margin-top: 0.75rem;
+    }
+
+    /* Books */
+    .books-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 3fr);
+      gap: 2rem;
+    }
+
+    .book-card {
+      background: rgba(3, 52, 37, 0.95);
+      border-radius: 1.25rem;
+      padding: 1.4rem;
+      border: 1px solid rgba(203,182,138,0.5);
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .book-cover-wrap {
+      border-radius: 0.6rem;
+      overflow: hidden;
+      background: #111;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .book-meta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-meta p {
+      font-size: 0.92rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(245,239,226,0.06);
+      border: 1px solid rgba(203,182,138,0.6);
+      font-size: 0.8rem;
+    }
+
+    .asin-form {
+      background: rgba(2,75,51,0.85);
+      border-radius: 1.25rem;
+      padding: 1.4rem;
+      border: 1px solid rgba(203,182,138,0.5);
+    }
+
+    .asin-form label {
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .asin-input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .asin-input-row input {
+      flex: 1 1 140px;
+      padding: 0.55rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(203,182,138,0.7);
+      background: rgba(4,34,24,0.9);
+      color: var(--cream);
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .asin-input-row input::placeholder {
+      color: rgba(245,239,226,0.55);
+    }
+
+    .asin-help {
+      font-size: 0.82rem;
+      opacity: 0.8;
+    }
+
+    .asin-error {
+      background: var(--error);
+      color: #5b0000;
+      border-radius: 0.6rem;
+      padding: 0.5rem 0.7rem;
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(203,182,138,0.4);
+      padding: 1.5rem;
+      background: #020b07;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: rgba(245,239,226,0.8);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      opacity: 0.9;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .about-grid,
+      .books-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header.hero {
+        padding-bottom: 2.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-inner {
+        gap: 1.4rem;
+      }
+
+      .hero-text p {
+        max-width: none;
+      }
+
+      .book-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .logo-lockup {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HERO / HEADER -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="logo-lockup">
+          <img src="images/logo.png" width="120" height="120" />
+          <div class="logo-text">
+            <h1>Irish History Tales</h1>
+            <p>A chronological history of Ireland in short videos & fiction.</p>
+          </div>
+        </div>
+
+        <h2>Short-form Irish history lessons & historical fiction by Darren Beaming.</h2>
+        <p>
+          Explore Ireland’s past from the Normans to the Rising through
+          bite-sized TikTok lessons and the United Irishmen novel series,
+          starting with <em>Verses in the Sand</em>.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://www.tiktok.com/@irish.history.t" target="_blank" rel="noopener">
+            Watch on TikTok
+          </a>
+          <!-- Replace # with your real YouTube channel URL -->
+          <a class="btn btn-outline" href="https://www.youtube.com/@IrishHistoryTales" target="_blank" rel="noopener">
+            Visit YouTube Channel
+          </a>
+          <a class="btn btn-outline" href="#books">
+            Read the Novel
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-media-card">
+          <!-- Replace with your real banner file path if you upload it -->
+          <img src="images/irish-history-tales-banner.png"
+               alt="Irish History Tales banner artwork" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <h2 class="section-heading">About Irish History Tales</h2>
+        <p class="section-subtitle">
+          Irish History Tales is a long-form journey through Ireland’s past,
+          told in short videos and historical fiction.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>The Channel</h3>
+            <p>
+              On TikTok and YouTube, Irish History Tales breaks down complex
+              events into clear, chronological episodes – perfect for students,
+              teachers, and anyone curious about Irish history.
+            </p>
+            <ul>
+              <li>Series on rebellions, revolutions & key figures</li>
+              <li>Short explainers ideal for classroom use</li>
+              <li>Content aligned with exam topics where possible</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>Darren Beaming</h3>
+            <p>
+              Darren Beaming writes historical fiction that intertwines real
+              events with character-driven stories. His work on the United
+              Irishmen era inspired Irish History Tales and vice versa.
+            </p>
+            <ul>
+              <li>Author of <em>Verses in the Sand</em></li>
+              <li>Focus on late 18th-century & Napoleonic periods</li>
+              <li>Blending accurate research with accessible storytelling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIKTOK SECTION -->
+    <section id="watch" class="section">
+      <div class="section-inner">
+        <h2 class="section-heading">Watch on TikTok</h2>
+        <p class="section-subtitle">
+          A selection of videos from <strong>@irish.history.t</strong>. For the
+          full feed, follow on TikTok.
+        </p>
+
+        <div class="tiktok-grid">
+          <!-- Example TikTok embed – replace YOUR_TIKTOK_VIDEO_ID with a real ID
+               Get this code from TikTok's "Embed" option on a video. -->
+          <div>
+            <blockquote class="tiktok-embed"
+                        cite="https://www.tiktok.com/@irish.history.t/video/YOUR_TIKTOK_VIDEO_ID"
+                        data-video-id="YOUR_TIKTOK_VIDEO_ID"
+                        style="max-width: 100%; min-width: 260px;">
+              <section>Loading TikTok...</section>
+            </blockquote>
+          </div>
+
+          <!-- Duplicate this block for more videos -->
+          <!--
+          <div>
+            <blockquote class="tiktok-embed"
+                        cite="https://www.tiktok.com/@irish.history.t/video/ANOTHER_ID"
+                        data-video-id="ANOTHER_ID"
+                        style="max-width: 100%; min-width: 260px;">
+              <section>Loading TikTok...</section>
+            </blockquote>
+          </div>
+          -->
+        </div>
+
+        <p class="tiktok-note">
+          Tip: Choose a pinned intro video and one or two favourites from each
+          historical era, then update these embeds every so often.
+        </p>
+      </div>
+    </section>
+
+    <!-- BOOKS SECTION -->
+    <section id="books" class="section">
+      <div class="section-inner">
+        <h2 class="section-heading">The United Irishmen Series</h2>
+        <p class="section-subtitle">
+          Explore the fictional side of Irish History Tales with
+          <em>Verses in the Sand</em>, the first novel in the United Irishmen
+          series by Darren Beaming.
+        </p>
+
+        <div class="books-grid">
+          <div id="book-result">
+            <!-- Initial book display will be injected by JavaScript -->
+          </div>
+
+          <div class="asin-form">
+            <form id="asin-lookup-form">
+              <label for="asin-input">
+                Look up a book by ASIN
+              </label>
+              <div class="asin-input-row">
+                <input id="asin-input"
+                       type="text"
+                       placeholder="e.g. B0CJHCSX95"
+                       value="B0CJHCSX95" />
+                <button type="submit" class="btn btn-primary">
+                  Show Book
+                </button>
+              </div>
+              <p class="asin-help">
+                This site currently supports Darren Beaming titles I’ve added.
+                To add more books, update the book list in the script.
+              </p>
+              <div id="asin-error" class="asin-error" style="display:none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Irish History Tales / Darren Beaming.</div>
+      <div class="footer-links">
+        <a href="https://www.tiktok.com/@irish.history.t" target="_blank" rel="noopener">TikTok</a>
+        <!-- Replace with real links as needed -->
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.amazon.co.uk/Verses-United-Irishmen-Darren-Beaming/dp/B0CJHCSX95" target="_blank" rel="noopener">
+          Verses in the Sand on Amazon
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- TikTok embed script -->
+<script async src="https://www.tiktok.com/embed.js"></script>
+
+<script>
+  // Simple book data map for ASIN lookup.
+  // This runs entirely in the browser and is safe for GitHub Pages.
+  const BOOKS_BY_ASIN = {
+    "B0CJHCSX95": {
+      asin: "B0CJHCSX95",
+      title: "Verses in the Sand (The United Irishmen, Book 1)",
+      subtitle: "Action, adventure and friendship during the Napoleonic Wars and the United Irishmen era.",
+      // Replace this placeholder with the actual cover URL from Amazon
+      cover: "https://via.placeholder.com/300x450?text=Verses+in+the+Sand",
+      rating: "Approx. 4.9 / 5",
+      reviews: "Based on current online reviews (Kindle / Audible / paperback).",
+      link: "https://www.amazon.co.uk/Verses-United-Irishmen-Darren-Beaming/dp/B0CJHCSX95"
+    }
+    // Add more books here, e.g. "ANOTHERASIN": { ... }
+  };
+
+  function renderBook(book) {
+    return `
+      <div class="book-card">
+        <div class="book-cover-wrap">
+          <a href="${book.link}" target="_blank" rel="noopener">
+            <img src="${book.cover}" alt="${book.title} cover" />
+          </a>
+        </div>
+        <div class="book-meta">
+          <h3>${book.title}</h3>
+          <p>${book.subtitle}</p>
+          <p><strong>ASIN:</strong> ${book.asin}</p>
+          <p class="rating-pill">
+            <span>★ ${book.rating}</span>
+          </p>
+          <p style="font-size:0.84rem; opacity:0.85;">${book.reviews}</p>
+          <div style="margin-top:0.7rem;">
+            <a href="${book.link}" target="_blank" rel="noopener" class="btn btn-primary">
+              View on Amazon
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function showBookForASIN(asin) {
+    const resultContainer = document.getElementById("book-result");
+    const errorEl = document.getElementById("asin-error");
+    const key = asin.trim().toUpperCase();
+
+    errorEl.style.display = "none";
+    errorEl.textContent = "";
+
+    const book = BOOKS_BY_ASIN[key];
+    if (!book) {
+      resultContainer.innerHTML = "";
+      errorEl.textContent =
+        "No book found for ASIN \"" + key +
+        "\". To support more titles, add them to BOOKS_BY_ASIN in the script.";
+      errorEl.style.display = "block";
+      return;
+    }
+
+    resultContainer.innerHTML = renderBook(book);
+  }
+
+  document.getElementById("asin-lookup-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const asinInput = document.getElementById("asin-input");
+    showBookForASIN(asinInput.value);
+  });
+
+  // Initial page setup
+  document.getElementById("year").textContent = new Date().getFullYear();
+  showBookForASIN("B0CJHCSX95");
+</script>
+
+</body>
+</html>
