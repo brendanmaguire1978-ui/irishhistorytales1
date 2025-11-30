@@ -59,9 +59,18 @@
       padding: 1.5rem 1.5rem 3rem;
     }
 
+    /* NEW: hero-inner now stacks the top content grid and the CTA row */
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem; /* Increased gap for separation between top content and buttons */
+      align-items: stretch;
+    }
+    
+    /* NEW: This container holds the logo/text (3fr) and media (2.5fr) in a grid */
+    .hero-top-content {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
       gap: 2rem;
@@ -76,6 +85,7 @@
     }
 
     .logo-mark {
+      /* This is now unused since we are using the logo.png image */
       width: 70px;
       height: 70px;
       border-radius: 999px;
@@ -89,6 +99,13 @@
       font-size: 1.8rem;
       letter-spacing: 0.15em;
       color: var(--cream);
+    }
+    
+    .logo-lockup img {
+      width: 70px;
+      height: auto;
+      border-radius: 0.5rem;
+      border: 2px solid var(--accent);
     }
 
     .logo-text h1 {
@@ -114,18 +131,23 @@
       opacity: 0.95;
     }
 
+    /* Updated layout for CTAs: Full width row */
     .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.75rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 1rem; /* Increased gap slightly for better spacing */
+      padding: 0 1rem; /* Add horizontal padding if needed, but flex takes care of full width */
+    }
+    
+    .hero-cta .btn {
+      width: 100%; /* Ensures buttons fill their grid column */
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.7rem 1.3rem;
+      padding: 0.8rem 1.4rem; /* Slightly larger padding for prominence */
       border-radius: 999px;
       font-weight: 600;
       border: 1px solid transparent;
@@ -159,6 +181,8 @@
 
     .hero-media {
       position: relative;
+      /* Buttons are removed, so this is just a container for the card */
+      display: block; 
     }
 
     .hero-media-card {
@@ -200,6 +224,164 @@
       margin-bottom: 1.75rem;
       max-width: 35rem;
     }
+    
+    /* --- NEWSLETTER STYLES (New Section) --- */
+    .newsletter-card {
+      background: var(--green);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      max-width: 500px; /* Constrain width for better focus */
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid var(--accent);
+    }
+
+    /* Mailchimp form general styles */
+    #mc-embedded-subscribe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    #mc-embedded-subscribe-form h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .mc-field-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .mc-field-group label {
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--cream-light);
+    }
+
+    .mc-field-group input[type="email"],
+    .mc-field-group input[type="text"] {
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--accent);
+      border-radius: 0.5rem;
+      background-color: var(--green-dark);
+      color: var(--text-main);
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .mc-field-group input:focus {
+      outline: none;
+      border-color: var(--cream);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Radio button styles */
+    .mc-field-group.input-group ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.2rem;
+    }
+
+    .mc-field-group.input-group ul label {
+      font-weight: 400;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+    
+    .mc-field-group input[type="radio"] {
+        /* Hide the default radio button */
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--accent);
+        border-radius: 999px;
+        margin-right: 0.5rem;
+        transition: background-color 0.2s, border-color 0.2s;
+        cursor: pointer;
+        position: relative;
+        top: -1px;
+    }
+
+    .mc-field-group input[type="radio"]:checked {
+        background-color: var(--accent);
+        border-color: var(--cream);
+    }
+    
+    /* GDPR/Marketing Permissions */
+    .content__gdprBlock {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .content__gdprBlock p {
+        font-size: 0.85rem;
+        opacity: 0.9;
+    }
+    
+    .content__gdprBlock a {
+        color: var(--accent);
+        text-decoration: underline;
+    }
+    
+    .mc_fieldset label.checkbox {
+        font-weight: 400;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    /* Submit button alignment */
+    .clear.foot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    #mc-embedded-subscribe {
+        /* Reuse the main primary button style */
+        display: block; 
+        width: 100%;
+        max-width: 300px;
+        margin-top: 0.5rem;
+    }
+    
+    /* Mailchimp branding visibility */
+    .refferal_badge {
+        filter: invert(1) hue-rotate(180deg); /* Make the dark logo visible on a dark background */
+        opacity: 0.7;
+    }
+    
+    /* Error/Response messages */
+    #mce-responses {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .response {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+    #mce-error-response {
+      background: var(--error);
+      color: var(--text-dark);
+      border: 1px solid #ffaaaa;
+    }
+    #mce-success-response {
+      background: #e6ffe6;
+      color: var(--green-dark);
+      border: 1px solid #aaffaa;
+    }
+
 
     /* About */
     .about-grid {
@@ -251,13 +433,16 @@
     }
 
     /* Books */
+    /* Updated layout for single book display */
     .books-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 2.1fr) minmax(0, 3fr);
-      gap: 2rem;
+      display: block; /* Change from grid to block for single item */
     }
 
     .book-card {
+      /* Centering the single book card and giving it a max width */
+      max-width: 550px; 
+      margin: 0 auto; 
+      
       background: rgba(3, 52, 37, 0.95);
       border-radius: 1.25rem;
       padding: 1.4rem;
@@ -297,55 +482,6 @@
       font-size: 0.8rem;
     }
 
-    .asin-form {
-      background: rgba(2,75,51,0.85);
-      border-radius: 1.25rem;
-      padding: 1.4rem;
-      border: 1px solid rgba(203,182,138,0.5);
-    }
-
-    .asin-form label {
-      font-size: 0.9rem;
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .asin-input-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .asin-input-row input {
-      flex: 1 1 140px;
-      padding: 0.55rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid rgba(203,182,138,0.7);
-      background: rgba(4,34,24,0.9);
-      color: var(--cream);
-      font-size: 0.95rem;
-      outline: none;
-    }
-
-    .asin-input-row input::placeholder {
-      color: rgba(245,239,226,0.55);
-    }
-
-    .asin-help {
-      font-size: 0.82rem;
-      opacity: 0.8;
-    }
-
-    .asin-error {
-      background: var(--error);
-      color: #5b0000;
-      border-radius: 0.6rem;
-      padding: 0.5rem 0.7rem;
-      font-size: 0.85rem;
-      margin-top: 0.4rem;
-    }
-
     footer {
       border-top: 1px solid rgba(203,182,138,0.4);
       padding: 1.5rem;
@@ -379,14 +515,22 @@
     }
 
     @media (max-width: 900px) {
-      .hero-inner,
-      .about-grid,
-      .books-grid {
+      /* NEW: Stack the content columns on mobile */
+      .hero-top-content,
+      .about-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
       header.hero {
         padding-bottom: 2.5rem;
+      }
+      
+      .book-card {
+        max-width: 100%; /* Allow full width on mobile */
+      }
+      
+      .newsletter-card {
+        padding: 1.5rem;
       }
     }
 
@@ -406,6 +550,17 @@
       .logo-lockup {
         flex-wrap: wrap;
       }
+      
+      /* Keep buttons stacking vertically on small mobile for better tap targets */
+      .hero-cta {
+          grid-template-columns: 1fr; 
+          gap: 0.5rem;
+      }
+      
+      .mc-field-group.input-group ul {
+          flex-direction: column;
+          gap: 0.5rem;
+      }
     }
   </style>
 </head>
@@ -415,47 +570,144 @@
   <!-- HERO / HEADER -->
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-text">
-        <div class="logo-lockup">
-          <img src="images/logo.png" width="120" height="120" />
-          <div class="logo-text">
-            <h1>Irish History Tales</h1>
-            <p>A chronological history of Ireland in short videos & fiction.</p>
+      
+      <!-- NEW CONTAINER FOR TOP CONTENT (TEXT + MEDIA/BANNER) -->
+      <div class="hero-top-content"> 
+        <div class="hero-text">
+          <div class="logo-lockup">
+            <!-- LOGO IMAGE PATH RESTORED -->
+            <img src="images/logo.png" onerror="this.src='https://placehold.co/70x70/024b33/f5efe2?text=IHT'" alt="Irish History Tales logo" />
+            <div class="logo-text">
+              <h1>Irish History Tales</h1>
+              <p>A chronological history of Ireland in short videos & fiction.</p>
+            </div>
           </div>
+
+          <h2>Short-form Irish history lessons & historical fiction by Darren Beaming.</h2>
+          <p>
+            Explore Ireland’s past from the Normans to the Rising through
+            bite-sized TikTok lessons and the United Irishmen novel series,
+            starting with <em>Verses in the Sand</em>.
+          </p>
         </div>
 
-        <h2>Short-form Irish history lessons & historical fiction by Darren Beaming.</h2>
-        <p>
-          Explore Ireland’s past from the Normans to the Rising through
-          bite-sized TikTok lessons and the United Irishmen novel series,
-          starting with <em>Verses in the Sand</em>.
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://www.tiktok.com/@irish.history.t" target="_blank" rel="noopener">
-            Watch on TikTok
-          </a>
-          <!-- Replace # with your real YouTube channel URL -->
-          <a class="btn btn-outline" href="https://www.youtube.com/@IrishHistoryTales" target="_blank" rel="noopener">
-            Visit YouTube Channel
-          </a>
-          <a class="btn btn-outline" href="#books">
-            Read the Novel
-          </a>
+        <div class="hero-media">
+          <div class="hero-media-card">
+            <!-- BANNER IMAGE PATH RESTORED -->
+            <img src="images/irish-history-tales-banner.png"
+                alt="Irish History Tales banner artwork"
+                onerror="this.src='https://placehold.co/500x350/024b33/f5efe2?text=Irish+History+Tales+Banner'" />
+          </div>
+          <!-- CTA buttons were here, now moved below hero-top-content -->
         </div>
       </div>
+      <!-- END hero-top-content -->
 
-      <div class="hero-media">
-        <div class="hero-media-card">
-          <!-- Replace with your real banner file path if you upload it -->
-          <img src="images/irish-history-tales-banner.png"
-               alt="Irish History Tales banner artwork" />
-        </div>
+      <!-- CTA BUTTONS MOVED HERE, FULL-WIDTH ROW -->
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://www.tiktok.com/@irish.history.t" target="_blank" rel="noopener">
+          Watch on TikTok
+        </a>
+        <!-- Replace # with your real YouTube channel URL -->
+        <a class="btn btn-outline" href="https://www.youtube.com/@IrishHistoryTales" target="_blank" rel="noopener">
+          Visit YouTube Channel
+        </a>
+        <a class="btn btn-outline" href="#books">
+          Read the Novel
+        </a>
       </div>
+      <!-- END CTA BUTTONS -->
     </div>
   </header>
 
   <main>
+    <!-- NEWSLETTER SECTION (New) -->
+    <section id="newsletter" class="section">
+      <div class="section-inner">
+        <!-- Title and Subtitle removed to keep it focused in the card -->
+        
+        <div class="newsletter-card">
+          <!-- Stripped back Mailchimp Form -->
+          <form action="https://darrenbeaming.us13.list-manage.com/subscribe/post?u=13520be65dbc0581f3153f578&amp;id=18d1613606&amp;v_id=3638&amp;f_id=00d705e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                  <h2>Join the Story! Get Updates & Tales</h2>
+                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                  
+                  <div class="mc-field-group">
+                      <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="email@example.com">
+                  </div>
+                  
+                  <div class="mc-field-group">
+                      <label for="mce-FNAME">First Name</label>
+                      <input type="text" name="FNAME" class=" text" id="mce-FNAME" value="">
+                  </div>
+                  
+                  <div class="mc-field-group">
+                      <label for="mce-LNAME">Last Name</label>
+                      <input type="text" name="LNAME" class=" text" id="mce-LNAME" value="">
+                  </div>
+                  
+                  <div class="mc-field-group input-group">
+                      <strong>I'm interested in:</strong>
+                      <ul>
+                          <li>
+                              <input type="radio" name="MMERGE3" id="mce-MMERGE30" value="Irish History Tales">
+                              <label for="mce-MMERGE30">Irish History Tales (General)</label>
+                          </li>
+                          <li>
+                              <input type="radio" name="MMERGE3" id="mce-MMERGE31" value="Book Updates">
+                              <label for="mce-MMERGE31">Book Updates (Novel Series)</label>
+                          </li>
+                      </ul>
+                  </div>
+                  
+                  <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                      <div class="content__gdpr">
+                          <label>Marketing Permissions</label>
+                          <p>Please select all the ways you would like to hear from Irish History Tales:</p>
+                          <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+                              <label class="checkbox subfield" for="gdpr45218">
+                                  <input type="checkbox" id="gdpr_45218" name="gdpr[45218]" class="gdpr" value="Y">
+                                  <span>Email</span>
+                              </label>
+                          </fieldset>
+                          <p>You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+                      </div>
+                      <div class="content__gdprLegal">
+                          <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/terms" target="_blank" rel="noopener">Learn more</a> about Mailchimp's privacy practices.</p>
+                      </div>
+                  </div>
+                  
+                  <div id="mce-responses" class="clear foot">
+                      <div class="response" id="mce-error-response" style="display: none;"></div>
+                      <div class="response" id="mce-success-response" style="display: none;"></div>
+                  </div>
+                  
+                  <!-- anti-bot hidden field (required by Mailchimp) -->
+                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                      <input type="text" name="b_13520be65dbc0581f3153f578_18d1613606" tabindex="-1" value="">
+                  </div>
+                  
+                  <div class="optionalParent">
+                      <div class="clear foot">
+                          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" value="Join the List">
+                          <!-- Mailchimp badge/link -->
+                          <p style="margin: 0px auto;">
+                            <a href="http://eepurl.com/iVHGTI" title="Mailchimp - email marketing made easy and fun" target="_blank" rel="noopener">
+                              <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
+                                <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;">
+                              </span>
+                            </a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- END NEWSLETTER SECTION -->
 
     <!-- ABOUT SECTION -->
     <section id="about" class="section">
@@ -503,46 +755,63 @@
       <div class="section-inner">
         <h2 class="section-heading">Watch on TikTok</h2>
         <p class="section-subtitle">
-          A selection of videos from <strong>@irish.history.t</strong>. For the
-          full feed, follow on TikTok.
+          Showcasing three of the latest or most popular videos from <strong>@irish.history.t</strong>.
+          Autoplay has been disabled for all embeds for a better user experience.
         </p>
 
         <div class="tiktok-grid">
-          <!-- Example TikTok embed – replace YOUR_TIKTOK_VIDEO_ID with a real ID
-               Get this code from TikTok's "Embed" option on a video. -->
+          
+          <!-- TIKTOK VIDEO SLOT 1: LATEST/FEATURED -->
           <div>
             <blockquote class="tiktok-embed"
-                        cite="https://www.tiktok.com/@irish.history.t/video/YOUR_TIKTOK_VIDEO_ID"
-                        data-video-id="YOUR_TIKTOK_VIDEO_ID"
+                        cite="https://www.tiktok.com/@irish.history.t/video/7577467931995442454"
+                        data-video-id="7577467931995442454"
+                        data-autoplay="false" 
+                        data-mute="true"
+                        data-mode="stand-alone"
                         style="max-width: 100%; min-width: 260px;">
               <section>Loading TikTok...</section>
             </blockquote>
           </div>
 
-          <!-- Duplicate this block for more videos -->
-          <!--
+          <!-- TIKTOK VIDEO SLOT 2: POPULAR/SECOND LATEST -->
           <div>
             <blockquote class="tiktok-embed"
-                        cite="https://www.tiktok.com/@irish.history.t/video/ANOTHER_ID"
-                        data-video-id="ANOTHER_ID"
+                        cite="https://www.tiktok.com/@irish.history.t/video/7397347693192056097"
+                        data-video-id="7397347693192056097"
+                        data-autoplay="false" 
+                        data-mute="true"
+                        data-mode="stand-alone"
                         style="max-width: 100%; min-width: 260px;">
               <section>Loading TikTok...</section>
             </blockquote>
           </div>
-          -->
+
+          <!-- TIKTOK VIDEO SLOT 3: INTRO/THIRD LATEST -->
+          <div>
+            <blockquote class="tiktok-embed"
+                        cite="https://www.tiktok.com/@irish.history.t/video/7465661797408722198"
+                        data-video-id="7465661797408722198"
+                        data-autoplay="false" 
+                        data-mute="true"
+                        data-mode="stand-alone"
+                        style="max-width: 100%; min-width: 260px;">
+              <section>Loading TikTok...</section>
+            </blockquote>
+          </div>
+
         </div>
 
         <p class="tiktok-note">
-          Tip: Choose a pinned intro video and one or two favourites from each
-          historical era, then update these embeds every so often.
+          All three video slots are now populated with your specified video IDs!
         </p>
       </div>
     </section>
 
-    <!-- BOOKS SECTION -->
+    <!-- BOOKS SECTION (Now static display) -->
     <section id="books" class="section">
       <div class="section-inner">
-        <h2 class="section-heading">The United Irishmen Series</h2>
+        <h2 class="section-heading">The United Irishmen Series: Book 1</h2>
         <p class="section-subtitle">
           Explore the fictional side of Irish History Tales with
           <em>Verses in the Sand</em>, the first novel in the United Irishmen
@@ -551,29 +820,7 @@
 
         <div class="books-grid">
           <div id="book-result">
-            <!-- Initial book display will be injected by JavaScript -->
-          </div>
-
-          <div class="asin-form">
-            <form id="asin-lookup-form">
-              <label for="asin-input">
-                Look up a book by ASIN
-              </label>
-              <div class="asin-input-row">
-                <input id="asin-input"
-                       type="text"
-                       placeholder="e.g. B0CJHCSX95"
-                       value="B0CJHCSX95" />
-                <button type="submit" class="btn btn-primary">
-                  Show Book
-                </button>
-              </div>
-              <p class="asin-help">
-                This site currently supports Darren Beaming titles I’ve added.
-                To add more books, update the book list in the script.
-              </p>
-              <div id="asin-error" class="asin-error" style="display:none;"></div>
-            </form>
+            <!-- The book card will be injected here automatically by JavaScript -->
           </div>
         </div>
       </div>
@@ -588,7 +835,7 @@
       <div class="footer-links">
         <a href="https://www.tiktok.com/@irish.history.t" target="_blank" rel="noopener">TikTok</a>
         <!-- Replace with real links as needed -->
-        <a href="#" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.youtube.com/@IrishHistoryTales" target="_blank" rel="noopener">YouTube</a>
         <a href="https://www.amazon.co.uk/Verses-United-Irishmen-Darren-Beaming/dp/B0CJHCSX95" target="_blank" rel="noopener">
           Verses in the Sand on Amazon
         </a>
@@ -601,39 +848,46 @@
 <!-- TikTok embed script -->
 <script async src="https://www.tiktok.com/embed.js"></script>
 
+<!-- Mailchimp dependencies (jQuery for validation script) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" xintegrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+
 <script>
-  // Simple book data map for ASIN lookup.
-  // This runs entirely in the browser and is safe for GitHub Pages.
+  // Simple book data map for static display.
   const BOOKS_BY_ASIN = {
+    // This is the book we want to permanently display
     "B0CJHCSX95": {
       asin: "B0CJHCSX95",
       title: "Verses in the Sand (The United Irishmen, Book 1)",
       subtitle: "Action, adventure and friendship during the Napoleonic Wars and the United Irishmen era.",
-      // Replace this placeholder with the actual cover URL from Amazon
-      cover: "https://via.placeholder.com/300x450?text=Verses+in+the+Sand",
+      // UPDATED COVER IMAGE LINK:
+      cover: "https://m.media-amazon.com/images/I/41UvtfzdLIL._SY445_SX342_QL70_ML2_.jpg", 
       rating: "Approx. 4.9 / 5",
       reviews: "Based on current online reviews (Kindle / Audible / paperback).",
       link: "https://www.amazon.co.uk/Verses-United-Irishmen-Darren-Beaming/dp/B0CJHCSX95"
     }
-    // Add more books here, e.g. "ANOTHERASIN": { ... }
   };
 
+  // Renders the book card HTML
   function renderBook(book) {
+    // Fallback if the Amazon image fails to load
+    const coverFallback = "https://placehold.co/140x210/666/fff?text=Cover+Not+Available";
     return `
       <div class="book-card">
         <div class="book-cover-wrap">
           <a href="${book.link}" target="_blank" rel="noopener">
-            <img src="${book.cover}" alt="${book.title} cover" />
+            <img src="${book.cover}" 
+                 alt="${book.title} cover" 
+                 onerror="this.onerror=null; this.src='${coverFallback}'" />
           </a>
         </div>
         <div class="book-meta">
           <h3>${book.title}</h3>
           <p>${book.subtitle}</p>
-          <p><strong>ASIN:</strong> ${book.asin}</p>
           <p class="rating-pill">
             <span>★ ${book.rating}</span>
           </p>
-          <p style="font-size:0.84rem; opacity:0.85;">${book.reviews}</p>
+          <p style="font-size:0.84rem; opacity:0.85; margin-top: 0.5rem;">${book.reviews}</p>
           <div style="margin-top:0.7rem;">
             <a href="${book.link}" target="_blank" rel="noopener" class="btn btn-primary">
               View on Amazon
@@ -644,36 +898,39 @@
     `;
   }
 
-  function showBookForASIN(asin) {
+  // Function to show the default book (now simplified)
+  function showDefaultBook() {
     const resultContainer = document.getElementById("book-result");
-    const errorEl = document.getElementById("asin-error");
-    const key = asin.trim().toUpperCase();
+    const defaultASIN = "B0CJHCSX95"; // The ASIN to always display
+    const book = BOOKS_BY_ASIN[defaultASIN];
 
-    errorEl.style.display = "none";
-    errorEl.textContent = "";
-
-    const book = BOOKS_BY_ASIN[key];
-    if (!book) {
-      resultContainer.innerHTML = "";
-      errorEl.textContent =
-        "No book found for ASIN \"" + key +
-        "\". To support more titles, add them to BOOKS_BY_ASIN in the script.";
-      errorEl.style.display = "block";
-      return;
+    if (book) {
+      resultContainer.innerHTML = renderBook(book);
+    } else {
+      // Fallback if the default book data is missing in the map
+      resultContainer.innerHTML = 
+        "<p style='color:var(--error); padding: 1rem; text-align:center;'>Error: Could not load default book details.</p>";
     }
-
-    resultContainer.innerHTML = renderBook(book);
   }
-
-  document.getElementById("asin-lookup-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const asinInput = document.getElementById("asin-input");
-    showBookForASIN(asinInput.value);
-  });
 
   // Initial page setup
   document.getElementById("year").textContent = new Date().getFullYear();
-  showBookForASIN("B0CJHCSX95");
+  
+  // Call the function to display the book permanently on load
+  showDefaultBook();
+  
+  // Mailchimp validation initialization (minimal version, relies on external scripts loaded above)
+  // This must run after jQuery and mc-validate.js are loaded.
+  (function($) {
+      window.fnames = new Array(); 
+      window.ftypes = new Array();
+      fnames[0]='EMAIL';ftypes[0]='email';
+      fnames[1]='FNAME';ftypes[1]='text';
+      fnames[2]='LNAME';ftypes[2]='text';
+      fnames[3]='MMERGE3';ftypes[3]='radio';
+  }(jQuery));
+  var $mcj = jQuery.noConflict(true);
+  
 </script>
 
 </body>
