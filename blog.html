@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBH4TB3LM8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KBH4TB3LM8');
+  </script>
+
+  <meta charset="UTF-8" />
+  <title>The History Blog | Irish History Tales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #024b33;
+      --green-dark: #013324;
+      --cream: #f5efe2;
+      --accent: #cbb68a;
+      --text-main: #f7f3e7;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--green-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .minimal-nav {
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(203,182,138,0.3);
+    }
+
+    .nav-inner { max-width: 1100px; margin: 0 auto; }
+    .back-link { color: var(--accent); font-weight: 500; text-decoration: none; }
+
+    .blog-hero {
+      padding: 4rem 1.5rem;
+      background: radial-gradient(circle at top right, #066c48 0, var(--green-dark) 60%);
+      text-align: center;
+    }
+
+    .blog-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .section { padding: 4rem 1.5rem; }
+    .section-inner { max-width: 800px; margin: 0 auto; }
+
+    /* Blog Post Styling */
+    .post-card {
+      background: rgba(2,75,51,0.3);
+      padding: 2.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(203,182,138,0.2);
+      margin-bottom: 3rem;
+    }
+
+    .post-date { color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .post-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0.5rem 0 1.5rem 0; color: var(--cream); }
+    .post-content p { margin-bottom: 1.2rem; opacity: 0.9; }
+
+    footer { padding: 3rem; text-align: center; font-size: 0.9rem; opacity: 0.7; border-top: 1px solid rgba(203,182,138,0.2); }
+  </style>
+</head>
+<body>
+
+  <header class="minimal-nav">
+    <div class="nav-inner"><a href="index.html" class="back-link">← Back to Home</a></div>
+  </header>
+
+  <section class="blog-hero">
+    <h1>Chronicles & Tales</h1>
+    <p style="color: var(--accent); font-style: italic;">Historical insights and updates from Darren Beaming</p>
+  </section>
+
+  <main class="section">
+    <div class="section-inner" id="blog-container">
+      <p>Loading the archives...</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Irish History Tales. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Fetch blog data from JSON
+    fetch('blog-data.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('blog-container');
+        container.innerHTML = ''; // Clear loading text
+        
+        data.posts.forEach(post => {
+          const postHtml = `
+            <article class="post-card">
+              <div class="post-date">${post.date}</div>
+              <h2 class="post-title">${post.title}</h2>
+              <div class="post-content">${post.content}</div>
+            </article>
+          `;
+          container.innerHTML += postHtml;
+        });
+      })
+      .catch(err => {
+        console.error("Error loading blog:", err);
+        document.getElementById('blog-container').innerHTML = "<p>Failed to load blog posts. Please check back later.</p>";
+      });
+  </script>
+</body>
+</html>

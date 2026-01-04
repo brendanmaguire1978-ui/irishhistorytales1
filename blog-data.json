@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "date": "January 4, 2026",
+      "title": "The Secrets of the United Irishmen",
+      "content": "<p>When researching <em>Verses in the Sand</em>, I discovered that the communication networks used by the United Irishmen were far more sophisticated than many realize.</p><p>Stay tuned as we dive deeper into the hidden codes used in 1798.</p>"
+    },
+    {
+      "id": 2,
+      "date": "December 20, 2025",
+      "title": "Why Chronology Matters",
+      "content": "<p>Irish history is often taught in fragments. My goal with the TikTok series and the novels is to string these fragments into a single, cohesive necklace of time.</p>"
+    }
+  ]
+}
