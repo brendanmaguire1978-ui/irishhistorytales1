@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBH4TB3LM8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KBH4TB3LM8');
+  </script>
+
+  <meta charset="UTF-8" />
+  <title>Verses in the Sand | Irish History Tales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore 'Verses in the Sand' by Darren Beaming. A gripping tale of action, adventure, and the United Irishmen era." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* MATCHING CORE STYLES FROM INDEX.HTML */
+    :root {
+      --green: #024b33;
+      --green-dark: #013324;
+      --cream: #f5efe2;
+      --cream-light: #faf6ee;
+      --accent: #cbb68a;
+      --text-main: #f7f3e7;
+      --text-dark: #1c1c1c;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--green-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* HEADER / NAV */
+    header.minimal-nav {
+      padding: 1.5rem;
+      background: var(--green-dark);
+      border-bottom: 1px solid rgba(203,182,138,0.3);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link { font-weight: 500; color: var(--accent); transition: opacity 0.2s; }
+    .back-link:hover { opacity: 0.8; }
+
+    /* BOOK HERO SECTION */
+    .book-hero {
+      padding: 4rem 1.5rem;
+      background: radial-gradient(circle at top right, #066c48 0, var(--green-dark) 60%);
+    }
+
+    .book-hero-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .featured-cover img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 1rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      border: 1px solid rgba(203,182,138,0.2);
+    }
+
+    .book-info h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .book-tagline {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+.goodreads-link {
+  color: #3b82f6;            /* blue */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.goodreads-link:hover {
+  color: #60a5fa;
+  text-decoration-thickness: 2px;
+}
+
+    .book-description { margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9; }
+    .book-description p { margin-bottom: 1rem; }
+
+    /* PURCHASE BUTTONS */
+    .purchase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: 0.2s;
+      text-align: center;
+      border: 1px solid transparent;
+    }
+
+    .btn-amazon {
+      background: var(--cream);
+      color: var(--green-dark);
+    }
+
+    .btn-amazon:hover { 
+      background: #fff; 
+      transform: translateY(-2px); 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* REVIEWS SECTION */
+    .section { padding: 4rem 1.5rem; background: rgba(0,0,0,0.15); }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-heading { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 2.5rem; 
+      margin-bottom: 3rem; 
+      text-align: center; 
+      color: var(--accent);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background: rgba(2,75,51,0.3);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(203,182,138,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      background: rgba(2,75,51,0.5);
+    }
+
+    .review-stars { color: #facc15; margin-bottom: 1rem; font-size: 1.2rem; }
+    .review-text { font-style: italic; margin-bottom: 1.5rem; opacity: 0.95; }
+    .review-author { font-weight: 600; font-size: 0.85rem; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em; }
+
+    footer { 
+      padding: 3rem 1.5rem; 
+      background: #011a12; 
+      border-top: 1px solid rgba(203,182,138,0.2); 
+      text-align: center; 
+      font-size: 0.9rem; 
+      opacity: 0.8;
+    }
+
+    @media (max-width: 800px) {
+      .book-hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .featured-cover { order: -1; }
+      .featured-cover img { max-width: 260px; }
+      .book-info h1 { font-size: 2.2rem; }
+      .purchase-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+  <header class="minimal-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="book-hero">
+      <div class="book-hero-inner">
+        <div class="featured-cover">
+          <!-- Using the uploaded cover image -->
+          <img src="images/verses-book.jpg" alt="Verses in the Sand Book Cover">
+        </div>
+        <div class="book-info">
+          <h1>Verses in the Sand</h1>
+          <p class="book-tagline">The United Irishmen Series, Book 1</p>
+          
+          <div class="book-description">
+            <p>Step into a world of action, adventure, and friendship during the Napoleonic Wars. <em>Verses in the Sand</em> follows the gripping journey of individuals caught in the tide of the United Irishmen era.</p>
+            <p>Blending meticulous historical research with high-stakes storytelling, Darren Beaming brings the late 18th century to life in a way that is both visceral and deeply moving.</p>
+          </div>
+
+          <h3 style="margin-bottom: 1.2rem; font-size: 0.9rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase;">Purchase Now:</h3>
+          <div class="purchase-grid">
+            <a href="https://www.amazon.ie/Verses-Sand-Darren-Beaming/dp/B0CJHCSX95/" class="btn btn-amazon" target="_blank" rel="noopener">Amazon Ireland</a>
+            <a href="https://www.amazon.co.uk/Verses-Sand-United-Irishmen-Book-ebook/dp/B0CJL5GTY7/" class="btn btn-amazon" target="_blank" rel="noopener">Amazon UK</a>
+            <a href="https://www.amazon.com/Verses-Sand-United-Irishmen-Book-ebook/dp/B0CJL5GTY7/" class="btn btn-amazon" target="_blank" rel="noopener">Amazon US</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section">
+      <div class="section-inner">
+        <h2 class="section-heading">Reader Reviews</h2>
+	<p> Over 200 reviews on Amazon.com (US version) and an average rating of 4.6 out of 5 (as of Jan 2026)
+	and nearly 100 ratings on Goodreads with a 4.7 out of 5 average. Visit <strong><a href="https://www.goodreads.com/book/show/199724294-verses-in-the-sand"
+   target="_blank"
+   class="goodreads-link">
+  Goodreads
+</a></strong>
+	for more information and to read the reviews. </p>
+        <br \>
+	<div class="reviews-grid">
+          
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"An incredible debut that brings 18th-century Ireland to life. The characters felt real and the historical detail was spot on."</p>
+            <p class="review-author">— Verified Amazon Reader</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"If you enjoy historical fiction with heart and pace, this is a must-read. Looking forward to the rest of the series!"</p>
+            <p class="review-author">— Verified Amazon Reader</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"A masterclass in blending fiction with history. Darren Beaming knows how to pull you into the world of the United Irishmen."</p>
+            <p class="review-author">— Verified Amazon Reader</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <p>© <span id="year"></span> Darren Beaming. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
