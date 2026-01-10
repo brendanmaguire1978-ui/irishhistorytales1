@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "id": 3,
+      "date": "January 10, 2026",
+      "title": "Admiral William Brown: The Foxford Boy Who Built a Navy",
+      "content": "<p>How did a boy from rural County Mayo end up becoming a national hero on the other side of the world?</p><p>In this video, we dive into the incredible true story of Admiral William Brown (Guillermo Brown), the 'Father of the Argentine Navy.' Born in Foxford, Ireland, in 1777, we explore his humble beginnings to his legendary status as a 'Soldier of Freedom.'</p><p><strong>What we cover in this video:</strong></p><ul><li><strong>The Early Struggle:</strong> His journey to America and the tragic loss of his father.</li><li><strong>The Escape:</strong> How he was pressed into the Royal Navy and his daring escape from the 'unescapable' French fortress of Verdun.</li><li><strong>A New Nation:</strong> Why an Irish merchant in Buenos Aires was tasked with building a fleet from scratch to fight the Spanish Empire.</li><li><strong>Tactical Genius:</strong> The legendary St. Patrick's Day victory at Martín García Island and the decisive Battle of Montevideo.</li><li><strong>The Humanitarian:</strong> His emotional return to Ireland during the Great Famine.</li></ul><p>Admiral Brown is more than just a historical figure; he is a symbol of the deep bond between Ireland and Argentina. Today, he is honored with thousands of statues, streets, and even football clubs (Club Atlético Almirante Brown) bearing his name.</p><blockquote>'I do not regret my life, I have been a soldier of freedom.'</blockquote><div class='video-container'><iframe src='https://www.youtube.com/embed/d7dnUwFON3E' frameborder='0' allowfullscreen></iframe></div>"
+    },
+    {
       "id": 1,
       "date": "January 4, 2026",
       "title": "Irish History Tales Website",
