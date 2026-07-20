@@ -351,7 +351,7 @@
             <time class="post-date" datetime="${escapeHtml(post.dateISO)}">${escapeHtml(post.date)}</time>
           </div>
           <h2 class="post-title">${escapeHtml(post.title)}</h2>
-          <p class="post-description">${escapeHtml(post.description)}</p>
+          <p class="post-description">${escapeHtml(post.description || '')}</p>
           <div class="episode-actions">
             <a class="episode-link primary" href="${escapeHtml(post.spotifyUrl)}" target="_blank" rel="noopener">Listen on Spotify ↗</a>
             <a class="episode-link secondary" href="${escapeHtml(post.appleUrl)}" target="_blank" rel="noopener">Apple Podcasts ↗</a>
@@ -369,7 +369,7 @@
             <time class="post-date" datetime="${escapeHtml(post.dateISO)}">${escapeHtml(post.date)}</time>
           </div>
           <h2 class="post-title">${escapeHtml(post.title)}</h2>
-          <div class="post-content">${post.content || ''}</div>
+          <div class="post-content">${post.content ?? ''}</div>
         </article>
       `;
     }
