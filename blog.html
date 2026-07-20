@@ -10,101 +10,315 @@
   </script>
 
   <meta charset="UTF-8" />
-  <title>The History Blog | Irish History Tales</title>
+  <title>Podcast Episodes & News | Irish History Tales</title>
+  <meta name="description" content="Browse every Irish History Tales podcast episode in publication order, with release dates, episode summaries and listening links." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --green: #024b33;
       --green-dark: #013324;
+      --green-light: #066c48;
       --cream: #f5efe2;
       --accent: #cbb68a;
       --text-main: #f7f3e7;
+      --card: rgba(2, 75, 51, 0.42);
+      --border: rgba(203, 182, 138, 0.24);
     }
+
+    * { box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
       background: var(--green-dark);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.65;
       margin: 0;
     }
 
+    a { color: inherit; }
+
     .minimal-nav {
-      padding: 1.5rem;
+      padding: 1.25rem 1.5rem;
       border-bottom: 1px solid rgba(203,182,138,0.3);
+      background: rgba(1, 51, 36, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
     }
 
-    .nav-inner { max-width: 1100px; margin: 0 auto; }
-    .back-link { color: var(--accent); font-weight: 500; text-decoration: none; }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .back-link,
+    .nav-listen-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
 
     .blog-hero {
-      padding: 4rem 1.5rem;
-      background: radial-gradient(circle at top right, #066c48 0, var(--green-dark) 60%);
+      padding: 5rem 1.5rem 4.5rem;
+      background: radial-gradient(circle at top right, var(--green-light) 0, var(--green-dark) 62%);
       text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
     }
 
     .blog-hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: clamp(2.5rem, 6vw, 4.25rem);
+      line-height: 1.08;
+      margin: 0 auto 1rem;
+      max-width: 900px;
     }
 
-    .section { padding: 4rem 1.5rem; }
-    .section-inner { max-width: 800px; margin: 0 auto; }
-/* Responsive Video Container */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
-  margin: 1.5rem 0;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(203,182,138,0.3);
-}
+    .hero-copy {
+      color: var(--accent);
+      font-size: 1.08rem;
+      margin: 0 auto;
+      max-width: 720px;
+    }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    .section { padding: 3rem 1.5rem 5rem; }
+    .section-inner { max-width: 980px; margin: 0 auto; }
 
-    /* Blog Post Styling */
+    .archive-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .filter-button {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: rgba(2, 75, 51, 0.35);
+      color: var(--cream);
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .filter-button:hover,
+    .filter-button:focus-visible {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .filter-button.is-active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--green-dark);
+    }
+
+    .archive-count {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
     .post-card {
-      background: rgba(2,75,51,0.3);
-      padding: 2.5rem;
+      background: var(--card);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
       border-radius: 1rem;
-      border: 1px solid rgba(203,182,138,0.2);
-      margin-bottom: 3rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1.4rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
     }
 
-    .post-date { color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; }
-    .post-title { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0.5rem 0 1.5rem 0; color: var(--cream); }
-    .post-content p { margin-bottom: 1.2rem; opacity: 0.9; }
+    .post-card[hidden] { display: none; }
 
-    footer { padding: 3rem; text-align: center; font-size: 0.9rem; opacity: 0.7; border-top: 1px solid rgba(203,182,138,0.2); }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.9rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .post-date {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .post-label {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(203, 182, 138, 0.4);
+      border-radius: 999px;
+      color: var(--cream);
+      font-size: 0.76rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.42rem 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.55rem, 4vw, 2.1rem);
+      line-height: 1.23;
+      margin: 0.35rem 0 1rem;
+      color: var(--cream);
+    }
+
+    .post-description,
+    .post-content { opacity: 0.92; }
+
+    .post-description { margin: 0; }
+    .post-content p { margin: 0 0 1.1rem; }
+    .post-content p:last-child { margin-bottom: 0; }
+    .post-content ul { padding-left: 1.35rem; }
+    .post-content blockquote {
+      border-left: 3px solid var(--accent);
+      margin: 1.3rem 0;
+      padding-left: 1rem;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+    }
+
+    .episode-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.4rem;
+    }
+
+    .episode-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.55rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.7rem 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .episode-link:hover,
+    .episode-link:focus-visible { transform: translateY(-1px); }
+
+    .episode-link.primary {
+      background: var(--accent);
+      color: var(--green-dark);
+    }
+
+    .episode-link.secondary {
+      border: 1px solid var(--border);
+      color: var(--cream);
+      background: rgba(1, 51, 36, 0.35);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 1.5rem 0 0;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(203,182,138,0.3);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .loading,
+    .error-message {
+      border: 1px solid var(--border);
+      border-radius: 0.8rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    footer {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.75;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 620px) {
+      .nav-listen-link { display: none; }
+      .blog-hero { padding-top: 3.75rem; }
+      .archive-toolbar { align-items: flex-start; }
+      .archive-count { width: 100%; }
+      .episode-actions { flex-direction: column; }
+      .episode-link { width: 100%; }
+    }
   </style>
 </head>
 <body>
 
   <header class="minimal-nav">
-    <div class="nav-inner"><a href="index.html" class="back-link">← Back to Home</a></div>
+    <div class="nav-inner">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <a href="https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O" class="nav-listen-link" target="_blank" rel="noopener">Listen on Spotify ↗</a>
+    </div>
   </header>
 
   <section class="blog-hero">
-    <h1>News & Updates</h1>
-    <p style="color: var(--accent); font-style: italic;">News, insights and updates on Irish History Tales & Darren Beaming Novels.</p>
+    <p class="eyebrow">The Complete Archive</p>
+    <h1>Podcast Episodes & News</h1>
+    <p class="hero-copy">Explore every Irish History Tales podcast release in publication order, alongside project news, research updates and announcements.</p>
   </section>
 
   <main class="section">
-    <div class="section-inner" id="blog-container">
-      <p>Loading the archives...</p>
+    <div class="section-inner">
+      <div class="archive-toolbar" aria-label="Archive filters">
+        <div class="filter-group">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="episode">Podcast Episodes</button>
+          <button class="filter-button" type="button" data-filter="news">News & Updates</button>
+        </div>
+        <p class="archive-count" id="archive-count" aria-live="polite"></p>
+      </div>
+
+      <div id="blog-container">
+        <p class="loading">Loading the archive…</p>
+      </div>
     </div>
   </main>
 
@@ -113,30 +327,91 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Fetch blog data from JSON
-    fetch('blog-data.json')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('blog-container');
-        container.innerHTML = ''; // Clear loading text
-        
-        data.posts.forEach(post => {
-          const postHtml = `
-            <article class="post-card">
-              <div class="post-date">${post.date}</div>
-              <h2 class="post-title">${post.title}</h2>
-              <div class="post-content">${post.content}</div>
-            </article>
-          `;
-          container.innerHTML += postHtml;
-        });
-      })
-      .catch(err => {
-        console.error("Error loading blog:", err);
-        document.getElementById('blog-container').innerHTML = "<p>Failed to load blog posts. Please check back later.</p>";
+    const container = document.getElementById('blog-container');
+    const countElement = document.getElementById('archive-count');
+    const filterButtons = Array.from(document.querySelectorAll('.filter-button'));
+    let posts = [];
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    function renderEpisode(post) {
+      return `
+        <article class="post-card" data-type="episode">
+          <div class="post-meta">
+            <span class="post-label">${escapeHtml(post.label || 'Podcast Episode')}</span>
+            <time class="post-date" datetime="${escapeHtml(post.dateISO)}">${escapeHtml(post.date)}</time>
+          </div>
+          <h2 class="post-title">${escapeHtml(post.title)}</h2>
+          <p class="post-description">${escapeHtml(post.description)}</p>
+          <div class="episode-actions">
+            <a class="episode-link primary" href="${escapeHtml(post.spotifyUrl)}" target="_blank" rel="noopener">Listen on Spotify ↗</a>
+            <a class="episode-link secondary" href="${escapeHtml(post.appleUrl)}" target="_blank" rel="noopener">Apple Podcasts ↗</a>
+            <a class="episode-link secondary" href="${escapeHtml(post.youtubeUrl)}" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderNews(post) {
+      return `
+        <article class="post-card" data-type="news">
+          <div class="post-meta">
+            <span class="post-label">News & Update</span>
+            <time class="post-date" datetime="${escapeHtml(post.dateISO)}">${escapeHtml(post.date)}</time>
+          </div>
+          <h2 class="post-title">${escapeHtml(post.title)}</h2>
+          <div class="post-content">${post.content || ''}</div>
+        </article>
+      `;
+    }
+
+    function updateCount(filter) {
+      const shown = filter === 'all' ? posts.length : posts.filter(post => post.type === filter).length;
+      countElement.textContent = `${shown} ${shown === 1 ? 'entry' : 'entries'}`;
+    }
+
+    function applyFilter(filter) {
+      document.querySelectorAll('.post-card').forEach(card => {
+        card.hidden = filter !== 'all' && card.dataset.type !== filter;
       });
+
+      filterButtons.forEach(button => {
+        const active = button.dataset.filter === filter;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+
+      updateCount(filter);
+    }
+
+    fetch('blog-data.json')
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        posts = [...(data.posts || [])].sort((a, b) => String(b.dateISO || '').localeCompare(String(a.dateISO || '')));
+        container.innerHTML = posts.map(post => post.type === 'episode' ? renderEpisode(post) : renderNews(post)).join('');
+        applyFilter('all');
+      })
+      .catch(error => {
+        console.error('Error loading archive:', error);
+        container.innerHTML = '<p class="error-message">The archive could not be loaded. Please check back shortly.</p>';
+        countElement.textContent = '';
+      });
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => applyFilter(button.dataset.filter));
+    });
   </script>
 </body>
 </html>
