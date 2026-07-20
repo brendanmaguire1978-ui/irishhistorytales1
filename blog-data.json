@@ -1,22 +1,236 @@
 {
+  "lastUpdated": "2026-07-20",
+  "spotifyShowUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+  "appleShowUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+  "youtubeChannelUrl": "https://www.youtube.com/@IrishHistoryTales",
   "posts": [
+    {
+      "id": "episode-14",
+      "type": "episode",
+      "dateISO": "2026-07-15",
+      "date": "15 July 2026",
+      "label": "Episode 14",
+      "title": "The Battle of Thurles: Strongbow's Greatest Defeat in Ireland",
+      "description": "Strongbow marches against Thomond without Raymond le Gros and suffers one of the greatest Norman defeats of the early conquest. The episode examines Donal Mór O’Brien, Rory O’Connor, the Ostmen of Dublin and the wider consequences of the battle in 1174.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-13",
+      "type": "episode",
+      "dateISO": "2026-06-24",
+      "date": "24 June 2026",
+      "label": "Episode 13",
+      "title": "The Norman Mutiny: Raymond Le Gros & the Naval Battle of Dungarvan",
+      "description": "A dispute between Strongbow and Raymond le Gros pushes the Norman army towards mutiny. Raymond’s return restores morale before a rare medieval naval battle unfolds off Dungarvan.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "bonus-1b",
+      "type": "episode",
+      "dateISO": "2026-06-19",
+      "date": "19 June 2026",
+      "label": "Bonus 1.B",
+      "title": "Strongbow Before Ireland: The Early Life of Richard de Clare",
+      "description": "A biography of Richard de Clare before the invasion of Ireland, exploring his family, upbringing during the Anarchy, connections to the Welsh Marches and difficult relationship with Henry II.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-12",
+      "type": "episode",
+      "dateISO": "2026-06-17",
+      "date": "17 June 2026",
+      "label": "Episode 12",
+      "title": "The Gaelic Resistance: Donal Mór O’Brien, Donal Kavanagh & the Great Revolt",
+      "description": "As Henry II faces rebellion across his empire, Gaelic rulers exploit Norman weakness in Ireland. Donal Mór O’Brien attacks Norman positions while Donal Kavanagh emerges as a major figure in the resistance.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-11",
+      "type": "episode",
+      "dateISO": "2026-06-10",
+      "date": "10 June 2026",
+      "label": "Episode 11",
+      "title": "The Conquest of Meath: Hugh de Lacy & the Last Days of Tiernan O’Rourke",
+      "description": "Henry II grants Meath to Hugh de Lacy, creating a powerful new Norman lordship. The episode follows castle building, rivalry with Strongbow and the disputed death of Tiernan O’Rourke at the Hill of Ward.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-10",
+      "type": "episode",
+      "dateISO": "2026-06-03",
+      "date": "3 June 2026",
+      "label": "Episode 10",
+      "title": "King Henry II in Ireland: Submissions, Reform & the Lord of Ireland",
+      "description": "Henry II lands in Ireland to bring the Norman invasion under royal control. The episode covers the submissions of Irish rulers, the Synod of Cashel, Laudabiliter and the emerging Lordship of Ireland.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "bonus-1a",
+      "type": "episode",
+      "dateISO": "2026-05-27",
+      "date": "27 May 2026",
+      "label": "Bonus 1.A",
+      "title": "The Song of Dermot and the Earl: Exploring the Source",
+      "description": "A closer look at one of the most important narrative sources for the Norman invasion. Who produced it, what does it tell us and how should its vivid but strongly pro-Norman account be used?",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-9",
+      "type": "episode",
+      "dateISO": "2026-05-20",
+      "date": "20 May 2026",
+      "label": "Episode 9",
+      "title": "The Invasion of Ossory: Donal Mór O’Brien & the Arrival of Henry II",
+      "description": "Strongbow’s position remains fragile after the siege of Dublin. He turns south, faces resistance in Leinster and joins Donal Mór O’Brien in a campaign against Ossory as Henry II prepares to intervene.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-8",
+      "type": "episode",
+      "dateISO": "2026-05-13",
+      "date": "13 May 2026",
+      "label": "Episode 8",
+      "title": "The Siege of Dublin, 1171: The High King of Ireland’s Great Gaelic Siege of Norman Dublin",
+      "description": "Rory O’Connor surrounds Dublin with a great Gaelic coalition while the Norman garrison runs short of food. With negotiations failing, Strongbow, Raymond le Gros and Milo de Cogan launch a desperate sortie.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-7",
+      "type": "episode",
+      "dateISO": "2026-05-06",
+      "date": "6 May 2026",
+      "label": "Episode 7",
+      "title": "The Fight for Dublin, 1171: The Norse-Gaelic Attack on Dublin",
+      "description": "After Dermot MacMurrough’s death, Strongbow claims Leinster through Aoife. Ascall Mac Torcaill returns by sea to reclaim Dublin, leading to a final struggle for the old Norse-Gaelic kingdom.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-6",
+      "type": "episode",
+      "dateISO": "2026-04-29",
+      "date": "29 April 2026",
+      "label": "Episode 6",
+      "title": "The Death of Dermot MacMurrough: Strongbow’s Claim, King Henry II & Laudabiliter",
+      "description": "Dermot MacMurrough dies at Ferns and leaves a dangerous power vacuum. Strongbow’s claim to Leinster brings him into conflict with Henry II while the episode examines the disputed papal document Laudabiliter.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-5",
+      "type": "episode",
+      "dateISO": "2026-04-22",
+      "date": "22 April 2026",
+      "label": "Episode 5",
+      "title": "The Norman Conquest of Leinster: The Battle of Baginbun, Sieges of Waterford & Dublin",
+      "description": "The first Norman forces gain a foothold in Ireland. Raymond le Gros survives the Battle of Baginbun before Strongbow arrives to take Waterford and Dublin, transforming a mercenary expedition into a conquest.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "trailer",
+      "type": "episode",
+      "dateISO": "2026-04-21",
+      "date": "21 April 2026",
+      "label": "Series Trailer",
+      "title": "Irish History Tales: Trailer",
+      "description": "An introduction to the chronological podcast journey through Irish history, from the Gaelic world and Viking Ireland to the Norman invasion and the political struggles that followed.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-4",
+      "type": "episode",
+      "dateISO": "2026-04-16",
+      "date": "16 April 2026",
+      "label": "Episode 4",
+      "title": "Diarmait Mac Murchada, Dearbhforgaill & the Road to Norman Invasion",
+      "description": "The story moves towards invasion through the rivalry between Diarmait Mac Murchada and Tiernan O’Rourke, the disputed abduction of Dearbhforgaill and Diarmait’s decision to seek Norman military support.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-3",
+      "type": "episode",
+      "dateISO": "2026-04-14",
+      "date": "14 April 2026",
+      "label": "Episode 3",
+      "title": "Gaelic Ireland: Kingdoms, Tanistry, Rivalries & High Kings",
+      "description": "An exploration of how power operated in twelfth-century Gaelic Ireland, including its kingdoms, dynasties, social structure, tanistry and the contested authority of the High Kingship.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-2",
+      "type": "episode",
+      "dateISO": "2026-04-10",
+      "date": "10 April 2026",
+      "label": "Episode 2",
+      "title": "Viking Ireland: Dublin’s “Millennium”, the Battle of Clontarf & the Hiberno-Norse",
+      "description": "The Vikings evolve from raiders into settlers, traders and city builders. The episode examines the Battle of Clontarf, Dublin’s disputed millennium and the emergence of Hiberno-Norse Ireland.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
+    {
+      "id": "episode-1",
+      "type": "episode",
+      "dateISO": "2026-04-04",
+      "date": "4 April 2026",
+      "label": "Episode 1",
+      "title": "Introduction to Irish History: The Gaelic Era & Primary Sources",
+      "description": "The opening episode introduces the chronological series, the Gaelic world, early Christianity and the principal sources used to reconstruct medieval Irish history.",
+      "spotifyUrl": "https://open.spotify.com/show/7J7njlcW1PNsKlRNEVgS5O",
+      "appleUrl": "https://podcasts.apple.com/ie/podcast/irish-history-tales-a-chronological-history-of/id1895860057",
+      "youtubeUrl": "https://www.youtube.com/@IrishHistoryTales"
+    },
     {
       "id": 3,
       "date": "January 10, 2026",
       "title": "Admiral William Brown: The Foxford Boy Who Built a Navy",
-      "content": "<p>How did a boy from rural County Mayo end up becoming a national hero on the other side of the world?</p><p>In this video, we dive into the incredible true story of Admiral William Brown (Guillermo Brown), the 'Father of the Argentine Navy.' Born in Foxford, Ireland, in 1777, we explore his humble beginnings to his legendary status as a 'Soldier of Freedom.'</p><p><strong>What we cover in this video:</strong></p><ul><li><strong>The Early Struggle:</strong> His journey to America and the tragic loss of his father.</li><li><strong>The Escape:</strong> How he was pressed into the Royal Navy and his daring escape from the 'unescapable' French fortress of Verdun.</li><li><strong>A New Nation:</strong> Why an Irish merchant in Buenos Aires was tasked with building a fleet from scratch to fight the Spanish Empire.</li><li><strong>Tactical Genius:</strong> The legendary St. Patrick's Day victory at Martín García Island and the decisive Battle of Montevideo.</li><li><strong>The Humanitarian:</strong> His emotional return to Ireland during the Great Famine.</li></ul><p>Admiral Brown is more than just a historical figure; he is a symbol of the deep bond between Ireland and Argentina. Today, he is honored with thousands of statues, streets, and even football clubs (Club Atlético Almirante Brown) bearing his name.</p><blockquote>'I do not regret my life, I have been a soldier of freedom.'</blockquote><div class='video-container'><iframe src='https://www.youtube.com/embed/d7dnUwFON3E' frameborder='0' allowfullscreen></iframe></div>"
+      "content": "<p>How did a boy from rural County Mayo end up becoming a national hero on the other side of the world?</p><p>In this video, we dive into the incredible true story of Admiral William Brown (Guillermo Brown), the 'Father of the Argentine Navy.' Born in Foxford, Ireland, in 1777, we explore his humble beginnings to his legendary status as a 'Soldier of Freedom.'</p><p><strong>What we cover in this video:</strong></p><ul><li><strong>The Early Struggle:</strong> His journey to America and the tragic loss of his father.</li><li><strong>The Escape:</strong> How he was pressed into the Royal Navy and his daring escape from the 'unescapable' French fortress of Verdun.</li><li><strong>A New Nation:</strong> Why an Irish merchant in Buenos Aires was tasked with building a fleet from scratch to fight the Spanish Empire.</li><li><strong>Tactical Genius:</strong> The legendary St. Patrick's Day victory at Martín García Island and the decisive Battle of Montevideo.</li><li><strong>The Humanitarian:</strong> His emotional return to Ireland during the Great Famine.</li></ul><p>Admiral Brown is more than just a historical figure; he is a symbol of the deep bond between Ireland and Argentina. Today, he is honored with thousands of statues, streets, and even football clubs (Club Atlético Almirante Brown) bearing his name.</p><blockquote>'I do not regret my life, I have been a soldier of freedom.'</blockquote><div class='video-container'><iframe src='https://www.youtube.com/embed/d7dnUwFON3E' frameborder='0' allowfullscreen></iframe></div>",
+      "type": "news",
+      "dateISO": "2026-01-10"
     },
     {
       "id": 1,
       "date": "January 4, 2026",
       "title": "Irish History Tales Website",
-      "content": "<p>Welcome to the new home of Irish History Tales. I’ve built this dedicated space to bring together my chronological history series and the world of my novel, <em>Verses in the Sand</em>.</p><p>Recently, it’s become clear that the TikTok algorithm is making it harder for long-form educational content to reach its audience. Because of this, I am shifting to a <strong>YouTube-first focus</strong>. While I will still share the story of Ireland on TikTok, YouTube will now be the primary home for my deeper dives into the forgotten figures and unsung heroes of our past.</p><p>I would be incredibly grateful for your support—whether through a like, a comment, or by exploring my book series. On that note, I’m thrilled to announce that Book 2 is nearing completion and will be released very soon!</p>"
+      "content": "<p>Welcome to the new home of Irish History Tales. I’ve built this dedicated space to bring together my chronological history series and the world of my novel, <em>Verses in the Sand</em>.</p><p>Recently, it’s become clear that the TikTok algorithm is making it harder for long-form educational content to reach its audience. Because of this, I am shifting to a <strong>YouTube-first focus</strong>. While I will still share the story of Ireland on TikTok, YouTube will now be the primary home for my deeper dives into the forgotten figures and unsung heroes of our past.</p><p>I would be incredibly grateful for your support—whether through a like, a comment, or by exploring my book series. On that note, I’m thrilled to announce that Book 2 is nearing completion and will be released very soon!</p>",
+      "type": "news",
+      "dateISO": "2026-01-04"
     },
     {
       "id": 2,
       "date": "December 30, 2025",
       "title": "The Pretty Dragoon",
-      "content": "<p>I really enjoyed researching and developing the content for the latest edition 'The Pretty Dragoon', which was a nickname given to the Irish woman - Kit Cavanagh, an extraordinary woman who joined the British army and served undiscovered in the army for 13 years.</p><p> She had been a tavern owner in Dublin and after her beloved husband was 'pressed' into the British Army, she volunteered to join the army to find him. During her search, she even duelled and killed a fellow soldier in a dispute over a woman, and a prostitute even accused her of being the 'father' of one of her children. </p><p> For more information, watch the full video on YouTube below </p><div class='video-container'><iframe src='https://www.youtube.com/embed/xr0I8zZt5fM' frameborder='0' allowfullscreen></iframe></div>"
+      "content": "<p>I really enjoyed researching and developing the content for the latest edition 'The Pretty Dragoon', which was a nickname given to the Irish woman - Kit Cavanagh, an extraordinary woman who joined the British army and served undiscovered in the army for 13 years.</p><p> She had been a tavern owner in Dublin and after her beloved husband was 'pressed' into the British Army, she volunteered to join the army to find him. During her search, she even duelled and killed a fellow soldier in a dispute over a woman, and a prostitute even accused her of being the 'father' of one of her children. </p><p> For more information, watch the full video on YouTube below </p><div class='video-container'><iframe src='https://www.youtube.com/embed/xr0I8zZt5fM' frameborder='0' allowfullscreen></iframe></div>",
+      "type": "news",
+      "dateISO": "2025-12-30"
     }
   ]
 }
