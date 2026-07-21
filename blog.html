@@ -202,6 +202,10 @@
     .post-content { opacity: 0.92; }
 
     .post-description { margin: 0; }
+
+    .post-title a { text-decoration: none; }
+    .post-title a:hover,
+    .post-title a:focus-visible { color: var(--accent); }
     .post-content p { margin: 0 0 1.1rem; }
     .post-content p:last-child { margin-bottom: 0; }
     .post-content ul { padding-left: 1.35rem; }
@@ -344,18 +348,20 @@
     }
 
     function renderEpisode(post) {
+      const pageUrl = post.pageUrl || '#';
       return `
         <article class="post-card" data-type="episode">
           <div class="post-meta">
             <span class="post-label">${escapeHtml(post.label || 'Podcast Episode')}</span>
             <time class="post-date" datetime="${escapeHtml(post.dateISO)}">${escapeHtml(post.date)}</time>
           </div>
-          <h2 class="post-title">${escapeHtml(post.title)}</h2>
+          <h2 class="post-title"><a href="${escapeHtml(pageUrl)}">${escapeHtml(post.title)}</a></h2>
           <p class="post-description">${escapeHtml(post.description || '')}</p>
           <div class="episode-actions">
-            <a class="episode-link primary" href="${escapeHtml(post.spotifyUrl)}" target="_blank" rel="noopener">Listen on Spotify ↗</a>
+            <a class="episode-link primary" href="${escapeHtml(pageUrl)}">Read episode notes →</a>
+            <a class="episode-link secondary" href="${escapeHtml(post.spotifyUrl)}" target="_blank" rel="noopener">Spotify ↗</a>
             <a class="episode-link secondary" href="${escapeHtml(post.appleUrl)}" target="_blank" rel="noopener">Apple Podcasts ↗</a>
-            <a class="episode-link secondary" href="${escapeHtml(post.youtubeUrl)}" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+            <a class="episode-link secondary" href="${escapeHtml(post.youtubeUrl)}" target="_blank" rel="noopener">YouTube ↗</a>
           </div>
         </article>
       `;

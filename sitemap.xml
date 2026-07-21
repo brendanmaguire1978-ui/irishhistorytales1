@@ -1,26 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://irishhistorytales.com/</loc>
-  <lastmod>2026-01-10T10:25:43+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://irishhistorytales.com/blog.html</loc>
-  <lastmod>2026-01-10T10:25:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://irishhistorytales.com/verses-in-the-sand.html</loc>
-  <lastmod>2026-01-10T10:25:43+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://irishhistorytales.com/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/blog.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/verses-in-the-sand.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-16-great-gaelic-army-1174.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-15-waterford-rebellion-1174.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-14-battle-of-thurles-1174.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-13-norman-mutiny-dungarvan.html</loc>
+    <lastmod>2026-06-24</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/bonus-strongbow-before-ireland.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-12-gaelic-resistance-great-revolt.html</loc>
+    <lastmod>2026-06-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-11-conquest-of-meath.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-10-henry-ii-in-ireland.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/bonus-song-of-dermot-and-the-earl.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-09-invasion-of-ossory.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-08-siege-of-dublin-1171.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-07-fight-for-dublin-1171.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-06-death-of-dermot-macmurrough.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-05-norman-conquest-of-leinster.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/trailer-irish-history-tales.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-04-road-to-norman-invasion.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-03-gaelic-ireland.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-02-viking-ireland.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://irishhistorytales.com/episodes/episode-01-introduction-to-irish-history.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
